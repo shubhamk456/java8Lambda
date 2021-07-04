@@ -20,6 +20,14 @@ public class TestPredicate {
 		Predicate<String> p2 = (t) -> t.length() < 20;
 		System.out.println(p2.test("hello world"));
 
+		Predicate<String> p3 = t -> t.length() > 5;
+		
+		Predicate<String> chaining = p2.and(p3);
+		System.out.println(chaining.test("hello you"));
+		
+		Predicate<String> chaining1 = Predicate.isEqualTo("Yes");
+		System.out.println(chaining1.test("Yes"));
+
 	}
 
 }
