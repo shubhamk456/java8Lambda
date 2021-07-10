@@ -23,7 +23,9 @@ public class LiveExample {
 
 		people.sort((pt, pl) -> pt.getAge() - pl.getAge());
 		people.sort(Comparator.comparing(Person::getAge).reversed());
-
+		
+		
+		
 	}
 
 }
